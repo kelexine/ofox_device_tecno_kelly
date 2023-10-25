@@ -26,7 +26,7 @@ OF_USE_LOCKSCREEN_BUTTON := 1
 OF_MAINTAINER := kelexine
 FOX_VERSION := v1.0 kelexine@xda
 
-OF_SCREEN_H := 1600
+OF_SCREEN_H := 1612
 OF_STATUS_H := 60
 OF_STATUS_INDENT_LEFT := 48
 OF_STATUS_INDENT_RIGHT := 48
@@ -41,9 +41,6 @@ OF_SKIP_MULTIUSER_FOLDERS_BACKUP := 1
 OF_UNBIND_SDCARD_F2FS := 1
 
 OF_QUICK_BACKUP_LIST := /boot;/data;/system_image;/vendor_image;/systemext_image;/product_image;
-
-# patch avb20 - some ROM recoveries try to overwrite custom recoveries
-OF_PATCH_AVB20 := 1
 
 # dispense with the entire OTA menu
 OF_DISABLE_OTA_MENU := 1
