@@ -5,9 +5,6 @@
 # mount point  fstype device                             device2              	flags
 
 
-/boot               emmc      /dev/block/platform/bootdevice/by-name/boot                           flags=display="Boot";flashimg=1;slotselect;
-/cache         ext4    	/dev/block/bootdevice/by-name/cache			flags=display="Cache"
-
 # Main Image Partitions
 /system_image  emmc    	/dev/block/bootdevice/by-name/system			flags=display="System (Image)";backup=1;flashimg=1;slotselect
 /vendor_image  emmc    	/dev/block/bootdevice/by-name/vendor			flags=display="Vendor (Image)";backup=1;flashimg=1;slotselect
@@ -17,8 +14,10 @@
 # Other Partitions
 /system_root   ext4   	/dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui;slotselect
 /vendor        ext4   	/dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui;slotselect
-/system_ext             /dev/block/bootdevice/by-name/system_ext                    flags=display="System Ext";backup=0;wipeingui;slotselect
-/product                /dev/block/bootdevice/by-name/product                   flags=display="Product";backup=0;wipeingui;slotselect
+/system_ext    ext4     /dev/block/bootdevice/by-name/system_ext                    flags=display="System Ext";backup=0;wipeingui;slotselect
+/product       ext4     /dev/block/bootdevice/by-name/product                   flags=display="Product";backup=0;wipeingui;slotselect
+
+
 /tranfs             ext4      /dev/block/platform/bootdevice/by-name/tranfs                         flags=display="Tranfs";
 /protect_f          ext4      /dev/block/platform/bootdevice/by-name/protect1                       flags=display="Protect_f";backup=1;
 /protect_s          ext4      /dev/block/platform/bootdevice/by-name/protect2                       flags=display="Protect_s";backup=1;
