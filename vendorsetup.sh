@@ -17,27 +17,12 @@
 # 	
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="kelly"
-OF_FL_PATH1="/sys/devices/virtual/torch/torch/torch_level"
-OF_FL_PATH2="/sys/class/torch/torch/torch_level"
-fox_get_target_device() {
-local chkdev=$(echo "$BASH_SOURCE" | grep \"$FDEVICE\")
-   if [ -n "$chkdev" ]; then
-      FOX_BUILD_DEVICE="$FDEVICE"
-   else
-      chkdev=$(set | grep BASH_ARGV | grep \"$FDEVICE\")
-      [ -n "$chkdev" ] && FOX_BUILD_DEVICE="$FDEVICE"
-   fi
-}
-
-if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
-   fox_get_target_device
-fi
-
-if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-	export FOX_ENABLE_APP_MANAGER=1
-	export FOX_USE_NANO_EDITOR=1
-	export FOX_USE_XZ_UTILS=1
+export FDEVICE="kelly"
+export OF_FL_PATH1="/sys/devices/virtual/torch/torch/torch_level"
+export OF_FL_PATH2="/sys/class/torch/torch/torch_level"
+export FOX_ENABLE_APP_MANAGER=1
+export FOX_USE_NANO_EDITOR=1
+export FOX_USE_XZ_UTILS=1
  
         # dynamic/retrofitted
 	if [ "$FOX_USE_DYNAMIC_PARTITIONS" = "1" ]; then
@@ -48,9 +33,3 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    		export OF_DISABLE_OTA_MENU=1
    		export FOX_VARIANT="dynamic"
 	fi
-else
-	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
-		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
-	fi
-fi
-#
