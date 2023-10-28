@@ -24,12 +24,9 @@ export FOX_ENABLE_APP_MANAGER=1
 export FOX_USE_NANO_EDITOR=1
 export FOX_USE_XZ_UTILS=1
  
-        # dynamic/retrofitted
-	if [ "$FOX_USE_DYNAMIC_PARTITIONS" = "1" ]; then
-		export FOX_VANILLA_BUILD=1
-		export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
-		export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
-        	export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
-   		export OF_DISABLE_OTA_MENU=1
-   		export FOX_VARIANT="dynamic"
-	fi
+export FOX_VANILLA_BUILD=1
+export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
+export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
+export OF_DISABLE_OTA_MENU=1
+export FOX_VARIANT="dynamic"
