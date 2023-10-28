@@ -18,7 +18,8 @@
 # 	Please maintain this if you use this script or any part of it
 #
 FDEVICE="kelly"
-
+OF_FL_PATH1="/sys/devices/virtual/torch/torch/torch_level"
+OF_FL_PATH2="/sys/class/torch/torch/torch_level"
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep \"$FDEVICE\")
    if [ -n "$chkdev" ]; then
@@ -35,8 +36,6 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_ENABLE_APP_MANAGER=1
-	export FOX_USE_BASH_SHELL=1
-	export FOX_ASH_IS_BASH=1
 	export FOX_USE_NANO_EDITOR=1
 	export FOX_USE_XZ_UTILS=1
  

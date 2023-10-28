@@ -12,7 +12,7 @@
 ```
 #
 
-# Orange Fox Recovery for Tecno Spark 8C Kelly
+# Orange Fox Recovery for Tecno Spark 8C (Kelly)
 
 # [Transsion Limited]
 ```

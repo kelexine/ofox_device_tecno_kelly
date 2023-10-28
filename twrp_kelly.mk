@@ -29,4 +29,4 @@ PRODUCT_NAME := twrp_kelly
 PRODUCT_BRAND := tecno
 PRODUCT_MODEL := kelly
 PRODUCT_MANUFACTURER := Tecno Mobile Limited
-PRODUCT_RELEASE_NAME := Tecno Spark 8C kelly
+PRODUCT_RELEASE_NAME := Tecno Spark 8C (kelly)
