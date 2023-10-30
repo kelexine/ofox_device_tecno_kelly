@@ -42,8 +42,6 @@ OF_NO_TREBLE_COMPATIBILITY_CHECK := 1
 OF_SKIP_MULTIUSER_FOLDERS_BACKUP := 1
 OF_UNBIND_SDCARD_F2FS := 1
 
-OF_QUICK_BACKUP_LIST := /boot;/data;/system_image;/vendor_image;/systemext_image;/product_image;
-
 # dispense with the entire OTA menu
 OF_DISABLE_OTA_MENU := 1
 
