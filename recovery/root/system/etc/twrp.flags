@@ -6,7 +6,7 @@
 
 # Other Partitions
 /system_root   ext4   	/dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui;slotselect;
-/vendor        ext4   	/dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui;slotselect;mounttodecrypt;
+/vendor        ext4   	/dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui;slotselect;
 /system_ext    ext4     /dev/block/bootdevice/by-name/system_ext                    flags=display="System Ext";backup=0;wipeingui;slotselect;
 /product       ext4     /dev/block/bootdevice/by-name/product                   flags=display="Product";backup=0;wipeingui;slotselect;
 
@@ -42,11 +42,11 @@
 
 
 # AVB
-/vbmeta				emmc	  /dev/block/platform/bootdevice/by-name/vbmeta			              flags=display="VBMeta";backup=1;flashimg=1;
-/vbmeta_system		emmc	  /dev/block/platform/bootdevice/by-name/vbmeta_system				  flags=display="VBMeta System";backup=1;flashimg=1;
-/vbmeta_vendor		emmc	  /dev/block/platform/bootdevice/by-name/vbmeta_vendor				  flags=display="VBMeta Vendor";backup=1;flashimg=1;
+/vbmeta				emmc	  /dev/block/platform/bootdevice/by-name/vbmeta			              flags=display="VBMeta";backup=1;flashimg=1;slotselect;
+/vbmeta_system		emmc	  /dev/block/platform/bootdevice/by-name/vbmeta_system				  flags=display="VBMeta System";backup=1;flashimg=1;slotselect;
+/vbmeta_vendor		emmc	  /dev/block/platform/bootdevice/by-name/vbmeta_vendor				  flags=display="VBMeta Vendor";backup=1;flashimg=1;slotselect;
 
 
 # External Storage
 /external_sd        auto      /dev/block/mmcblk1p1	/dev/block/mmcblk1 	     					  flags=display="MicroSD Card";storage;wipeingui;removable
-/usb-otg            auto      /dev/block/sdd1  /dev/block/sdd                     				  flags=display="USB Storage";storage;wipeingui;removable;fsflags="utf8"
+/usb-otg            auto      /dev/block/sda1  /dev/block/sda                     				  flags=display="USB OTG";storage;wipeingui;removable;fsflags="utf8"
