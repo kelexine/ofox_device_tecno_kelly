@@ -17,9 +17,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Inherit from kelly device
 $(call inherit-product, device/tecno/kelly/device.mk)
 
-# Inherit any OrangeFox-specific settings
-$(call inherit-product, device/tecno/kelly/fox_kelly.mk)
-
 # Inherit some common twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
