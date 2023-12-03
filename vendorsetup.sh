@@ -39,10 +39,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	export PLATFORM_SECURITY_PATCH="2099-12-31"
    	export TW_DEFAULT_LANGUAGE="en"
    	export LC_ALL="C"
-   	export 
    	export FOX_AB_DEVICE=1
-   	export FOX_VIRTUAL_AB_DEVICE=1
-   	export FOX_VANILLA_BUILD=1
    	export OF_USE_GREEN_LED=0
    	export OF_FBE_METADATA_MOUNT_IGNORE=1
    	export OF_USE_MAGISKBOOT=1
@@ -53,10 +50,13 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 	export OF_NO_MIUI_PATCH_WARNING=1
 	export FOX_USE_BASH_SHELL=1
+	export FOX_ASH_IS_BASH=1
+	export FOX_USE_TAR_BINARY=1
+	export FOX_USE_SED_BINARY=1
 	export FOX_USE_XZ_UTILS=1
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
 	export OF_QUICK_BACKUP_LIST="/boot;/data;"
-	export OF_PATCH_AVB20=0
+	export OF_PATCH_AVB20=1
 	export FOX_DELETE_AROMAFM=1
 	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1510672800"; # Tue Nov 14 15:20:00 GMT 2017
 	export FOX_ENABLE_APP_MANAGER=0
@@ -79,7 +79,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         
         # screen settings
 	export OF_SCREEN_H=1612
-	export OF_STATUS_H=80
+	export OF_STATUS_H=40
 	export OF_ALLOW_DISABLE_NAVBAR=0 # We don't have physical buttons
 	export OF_STATUS_INDENT_LEFT=48
 	export OF_STATUS_INDENT_RIGHT=48

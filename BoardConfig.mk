@@ -146,18 +146,18 @@ BOARD_USES_MTK_HARDWARE := true
 
 ## TWRP-Specific configuration
 TW_THEME := portrait_hdpi
-TW_DEVICE_VERSION := kelexine-xda
+TW_DEVICE_VERSION := R_11-BETA
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USES_MKE2FS := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_DEFAULT_BRIGHTNESS := 1200
+TW_DEFAULT_BRIGHTNESS := 1500
 TW_MAX_BRIGHTNESS := 4046
 TW_Y_OFFSET := 80
 TW_H_OFFSET := -60
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_PYTHON := false
-TW_EXCLUDE_NANO := false
+TW_INCLUDE_NANO := true
 TW_INCLUDE_LPDUMP := true
 TW_EXCLUDE_APEX := true
 TW_EXTRA_LANGUAGES := false
