@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2022 The Android Open Source Project
 # Copyright (C) 2022 SebaUbuntu's TWRP device tree generator
 #
@@ -22,7 +21,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := kelly
-PRODUCT_NAME := twrp_kelly
+PRODUCT_NAME := fox_kelly
 PRODUCT_BRAND := tecno
 PRODUCT_MODEL := kelly
 PRODUCT_MANUFACTURER := Tecno Mobile Limited
