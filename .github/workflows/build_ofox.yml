@@ -1,4 +1,4 @@
-name: Recovery Build
+name: Fox Build
 
 on:
   workflow_dispatch:
@@ -95,6 +95,8 @@ jobs:
         set +e
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
+        export OF_FLASHLIGHT_ENABLE=1
+        export OF_FL_PATH1=/sys/class/torch/torch/torch_level
         set -e
         lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && mka adbd ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc --all)
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
