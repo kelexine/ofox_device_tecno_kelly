@@ -173,8 +173,3 @@ TW_PREPARE_DATA_MEDIA_EARLY := true
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
-
-# Fox Flags
-
-OF_FL_PATH1 := "/sys/class/torch/torch/torch_level"
-OF_FLASHLIGHT_ENABLE := 1
